@@ -1,0 +1,8 @@
+name: weathermonthly
+account: rridings
+server: shinyapps.io
+bundleId: 337067
+url: https://rridings.shinyapps.io/weathermonthly
+when: 1450816810.49478
+asMultiple: FALSE
+asStatic: FALSE
