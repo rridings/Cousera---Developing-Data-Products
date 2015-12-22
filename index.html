@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Monthly</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Weather Monthly">
+  <meta name="author" content="Rob Ridings">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Weather Monthly</h1>
+    <h2>30 year monthly averages accross the US</h2>
+    <p>Rob Ridings<br/>Cousera - Developing Data Products</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>What to pack</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Every had trouble packing for trip with an extended stay?<br>
+<br></p>
+
+<div style='text-align: center;'>
+    <img src='assets/img/luggage.jpg' />
+</div>
+
+<p><br>
+Current weather sites are great for giving current forcecasts.  But what if you needed to know how to pack, for an entire month or six months.<br>
+<br>
+That is where <b>Weather Monthly</b> fits in.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Weather Monthly</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Using 1981-2010 U.S. Climate Normals from the National Oceanic and Atmospheric Administration, <b>Weather Monthly</b> can tell you the average minumum and maximun temperature for a specfic location in a given month.  Additionally, <b>Weather Monthly</b> will provide the average snowfall, in case you want to pack your skis. 
+<br>
+<br>
+<img src='assets/img/logo_noaa.png' /> 
+<br>
+<a href="https://www.ncdc.noaa.gov/data-access/land-based-station-data/land-based-datasets/climate-normals/1981-2010-normals-data">1981-2010 U.S. Climate Normals</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>How to use</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Identify a location by its longitude and latitude coordinates.</li>
+<li>Select a radius in miles to identify a circle around that point.</li>
+<li>Select the month you are interest in.
+<br>
+<br>
+For example<br>
+<br>
+<b>John Hopkins Univeristy</b> is located at 39.3289 N, 76.6203 W.
+Let&#39;s draw a 50 mile circle around that point and see what we can expect in January.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Results</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><b>John Hopkins University</b> in January<br></p>
+
+<pre><code class="r">longitude &lt;- -76.6203
+latitude &lt;- 39.3289
+month &lt;- &#39;jan&#39;
+radius &lt;- 50
+df &lt;- data.frame(longitude, latitude, month, radius, stringsAsFactors=FALSE)
+
+w &lt;- weather(df)
+</code></pre>
+
+<p><br>
+Maximum Temperature: 41 F<br>
+Minimum Temperature: 24 F<br>
+Snowfall: 7.07 inches<br></p>
+
+<p><a href="https://rridings.shinyapps.io/weathermonthly">Try it now</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='What to pack'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Weather Monthly'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='How to use'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Results'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
